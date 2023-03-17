@@ -24,8 +24,17 @@ server.get('/', async (request, reply) => {
   return "CREATED"
 })
 
+//get all posts
+server.get('/',async(request,reply)=>{
 
+})
 
+//create post
+server.post('/',async(request,reply)=>{
+
+})
+
+// create image
 server.post('/creation', async (request, reply) => {
   const params = JSON.parse(request.body);
   try {

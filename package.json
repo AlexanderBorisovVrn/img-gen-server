@@ -20,7 +20,7 @@
     "@fastify/cors": "^8.2.0",
     "cloudinary": "^1.35.0",
     "fastify": "^4.14.1",
-    "openai": "^3.2.1",
-    "rethinkdb": "^2.4.2"
+    "firebase": "^9.17.2",
+    "openai": "^3.2.1"
   }
 }
