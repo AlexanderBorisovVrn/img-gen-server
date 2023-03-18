@@ -8,6 +8,7 @@ import {
 import {
   createImg
 } from './assets/createImg.js'
+import { mockImageCreator } from './assets/mockImageCreator.js';
 
 const server = fastify({
   logger: true
@@ -28,7 +29,8 @@ server.get('/', async (request, reply) => {
 
 server.post('/creation', async (request, reply) => {
   const params = JSON.parse(request.body);
-  return await createImg(params);
+  // return await createImg(params);
+  return await mockImageCreator();
  })
 
  
