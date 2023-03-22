@@ -1,8 +1,7 @@
-import * as dotenv from 'dotenv';
-dotenv.config()
+import enviroment from "../utils/enviroment.js";
 import { OpenAIApi, Configuration } from "openai";
 const configuration = new Configuration({
-  apiKey: process.env.AI_KEY,
+  apiKey: enviroment.ai_key,
 });
 
 const openai = new OpenAIApi(configuration);

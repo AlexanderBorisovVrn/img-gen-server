@@ -9,5 +9,3 @@ export const mockImageCreator = async () => {
   return buf;
 }
 
-
-mockImageCreator();
