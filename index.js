@@ -7,7 +7,6 @@ import {
   createImg
 } from './assets/createImg.js'
 
-import { mockImageCreator } from './assets/mockImageCreator.js';
 
 const server = fastify({
   logger: true
@@ -28,18 +27,7 @@ server.get('/', async (request, reply) => {
 server.post('/', postImage)
 
 // create image
-server.post('/creation', async (request, reply) => {
-  const params = JSON.parse(request.body);
-  // return await createImg(params);
-  return await mockImageCreator();
-
-  // try {
-  //   const response = await createImg(params);
-  //   reply.send(response.data.data[0].b64_json);
-  // } catch (error) {
-  //   console.log('error is in index.js ' + error);
-  // }
-})
+server.post('/creation', createImg)
 
 
 // Run the server!
