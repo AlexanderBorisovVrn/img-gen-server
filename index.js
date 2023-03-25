@@ -1,12 +1,10 @@
 import fastify from 'fastify';
 import cors from '@fastify/cors'
-import { postImage } from './assets/postImage.js';
 import env from './utils/enviroment.js';
 import { dbConnect } from './db/dbConnect.js';
-import {
-  createImg
-} from './assets/createImg.js'
+import routes from './routes/index.js'
 
+const {createImg,postImage,getAllPost} = routes
 
 const server = fastify({
   logger: true
@@ -20,8 +18,7 @@ let port = parseInt(env.port, 10);
 
 
 //get all posts
-server.get('/', async (request, reply) => {
-})
+server.get('/', getAllPost)
 
 //create post
 server.post('/', postImage)

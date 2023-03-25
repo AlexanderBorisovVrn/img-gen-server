@@ -6,20 +6,24 @@
   "type": "module",
   "scripts": {
     "start": "nodemon index.js",
+    "build": "esbuild index.js --platform=node --bundle --minify --outfile=built/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "babel-loader": "^9.1.2",
     "dotenv": "^16.0.3",
     "mongoose": "^7.0.2",
     "node-fetch": "^3.3.0",
-    "nodemon": "^2.0.21"
+    "nodemon": "^2.0.21",
+    "webpack-cli": "^5.0.1"
   },
   "dependencies": {
     "@fastify/cors": "^8.2.0",
     "cloudinary": "^1.35.0",
+    "esbuild": "0.17.13",
     "fastify": "^4.14.1",
     "firebase": "^9.17.2",
     "openai": "^3.2.1"
